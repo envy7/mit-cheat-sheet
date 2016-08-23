@@ -1,0 +1,146 @@
+MIT Instructions Cheat Sheet
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MOV: Move
+		2 operands
+		1 byte operation
+		e.g MOV Rd, Rs copies data from source to destination
+
+MVI: Move Immediate
+		load a constant into a register
+		loads 8 bits of the second byte into the register specified
+		e.g MVI A, 82H
+
+OUT: Output to port
+		send a databyte to an output device
+
+IN:  Input from port
+		read a databyte from an output device
+		e.g IN 00H
+
+HLT: Halt 
+		Stop Processing and wait
+		e.g OUT 01H
+
+NOP: No Operation
+		Do not perform any operation
+
+Arithemetic OPerations:
+**********************
+
+ADD: Add
+		This is a 1 byte instruction
+		Adds content of register into accumulator
+		e.g ADD C : Acc <- Acc + C
+
+ADI: Add Immediate
+		This is a 2 byte instruction
+		Adds the second byte(constant) to the contents of the accumulator
+
+SUB: Subtract
+		This is a 1 byte instruction
+		Subtracts the content of register from accumulator
+		e.g SUB C : Acc <- Acc - C
+
+SUI: Subtract Immediate
+		This is a 2 byte instruction
+		Subtracts the second byte rom the contents of the accumulator
+
+INR: Increment
+		This is a 1 byte instruction
+		Increase the contents of register by 1
+		All flags accept the CY are affected
+
+DCR: Decrement
+		This is a 1 byte instruction
+		Decreases the contents of register by 1		
+		All flags except the CY are affected
+
+Logic Operations:
+*****************
+
+ANA: Logical AND 
+		with Accumulator
+		This is a 1 byte instruction
+		Operand is a Register
+
+ANI: AND Immediate 
+		with Accumulator 				
+		This is a 2 byte instruction
+		Operand is Constant
+
+ORA: Logically OR 
+		with Accumulator
+		This is a 1 byte instruction
+		Operand is Register
+
+ORI: OR Immediate 
+		with Accumulator
+		This is a 2 byte instruction
+		Operand is constant
+
+XRA: XOR 
+		with Accumulator
+		This is a 1 byte instruction
+
+XRI: XOR immediate
+		with Accumulator
+		This is a 2 byte instruction
+
+CMA: Complement
+		complements contents of accumulator
+		This is a 1 byte instruction
+
+Branch Operations:
+******************
+Uncondtional Jump:
+
+	JMP: Jump
+			This is a 3 byte instruction
+			second and third bytes specify the higher and lower bytes respectively
+
+Conditional Jump: Check Flag conditions and makes decision to change sequence of program or not
+
+	JC: Jump On Carry
+	JNC: Jump On No Carry
+	JZ: Jump On Zero
+	JNZ: Jump on Non Zero
+	JP:
+	JM:
+	JPE:
+	JPO:
+	
+Additional Data Transfer and 16 bit Arithmetic Instructions:
+***********************************************************
+
+LXI Rp: load Register Pair Immediate
+			loading 16 bit data in register pairs
+			e.g LXI H, 2050H ---> H[ 20 ][ 50 ]L
+
+LDAX B/D: Load Accumulator Indirect
+
+LDA 16bit: Load Accumulator Direct
+
+
+
+
+General Concepts:
+^^^^^^^^^^^^^^^^
+Flags: 
+
+CY: flag acts as both carry in addition, and borrow in subtraction.
+
+flags present:
+	Carry Flag
+	Zero Flag
+	Sign Flag
+	Parity FLag
+
+
+
+
+
+
+
+
+

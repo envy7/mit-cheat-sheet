@@ -1,3 +1,5 @@
+# mit-cheat-sheet
+
 MIT Instructions Cheat Sheet
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -210,15 +212,3 @@ flags present:
 Application of Rotate Instructions:
 
 They are used in arithmetic divide and multiply operations for serial data transfer.
-
-
-
-
-
-
-
-
-
-
-
-

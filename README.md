@@ -186,15 +186,18 @@ CMP R/M = data at A - data at R/M
 			when A is greater, both flags are reset as neither borrow occurs, nor is the result 0.
 
 			
+Special 16 byte operations
+***************************
 
+DAD Rp : Add register Pair to H * L Registers
+What happens : HL = HL + Rp
 
-
-
-
-
-					 		 
-							
-
+PCHL : Load Program counter with content of HL Register
+SPHL : Load Stack Pointer with content of HL Register
+SCHG : Exchange HL with DE
+XTHL : Exchange HL with top of the stack
+LHLD 16BitAddr : Load HL with the contents of the 16BitAddr 
+SHLD 16BitAddr : Store content of HL into the 16Bit Addr
 
 
 General Concepts:
